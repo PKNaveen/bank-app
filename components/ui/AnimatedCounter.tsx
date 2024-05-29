@@ -4,6 +4,7 @@ import CountUp from "react-countup";
 export default function AnimatedCounter({amount}: { amount: number }) {
     return (
         <div className="w-full">
+            {/*count up is react lib for slow counting effect of numbers*/}
             <CountUp
                 end={amount}
                 prefix="$"
