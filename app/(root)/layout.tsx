@@ -12,14 +12,14 @@ export default function RootLayout({
         <main className="flex h-screen w-full font-inter">
             <Sidebar user={loggedIn}/>
             <div className="flex size-full flex-col ">
-            {/*Below changed div from just root-layout, I wanted the hamburger menu on the left instead of right, if ti doesnt work remove
-            flex flex-col and the classname from image tag*/}
-            <div className="root-layout  flex flex-col">
-            <Image src="/icons/logo.svg" alt="menu icon" width={30} height={30} className="self-end"/>
-                <div>
-                <MobileNav user={loggedIn}/>
+            {/*since html is top down rendering I just moved movileNav component (hanburger menu) above the logo to make it render left */}
+                <div className="root-layout">
+                    <div className="flex flex-col">
+                        <MobileNav user={loggedIn} className="self-end"/>
+                    </div>
+                    <Image src="/icons/logo.svg" alt="menu icon" width={30} height={30} className="self-end"/>
+
                 </div>
-            </div>
                 {children}
             </div>
         </main>
