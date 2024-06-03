@@ -193,3 +193,10 @@ export const getTransactionStatus = (date: Date) => {
 
   return date > twoDaysAgo ? "Processing" : "Success";
 };
+
+import {z} from 'zod'
+export const authFormSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(8),
+})
+
