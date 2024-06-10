@@ -5,6 +5,8 @@ import {sidebarLinks} from "@/constants";
 import React from "react";
 import Link from "next/link";
 import {cn} from "@/lib/utils";
+import Footer from "@/components/ui/Footer";
+import {SiderbarProps} from "@/types";
 const Sidebar =({user}: SiderbarProps) =>{
     const pathName =usePathname()
     return(
@@ -33,6 +35,7 @@ const Sidebar =({user}: SiderbarProps) =>{
                 )}
             )}
             </nav>
+            <Footer user={user} type="mobile"/>
         </section>
     )
 }

@@ -3,6 +3,7 @@ import CountUp from "react-countup";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import {Doughnut} from "react-chartjs-2";
 import DoughnutChart from "@/components/ui/DoughnutChart";
+import {TotlaBalanceBoxProps} from "@/types";
 
 export default function TotalBalancedBox({accounts=[], totalBanks, totalCurrentBalance}: TotlaBalanceBoxProps){
     return(
